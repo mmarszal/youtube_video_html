@@ -3,25 +3,80 @@
     <head>
         <title>Contributing to Open Source Part I: The Easy Way</title>
         <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap" rel="stylesheet"> 
     </head>
     <body>
 
         <!-- Navigation -->
 
-        <nav>
-            <ul>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Youtube</a></li>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li class="nav-item"> <!-- Menu -->
+                    <a class="nav-link" href="#">
+                        <svg aria-hidden="true" 
+                            focusable="false" 
+                            data-prefix="fas" 
+                            data-icon="bars" 
+                            class="svg-inline--fa fa-bars fa-w-14" 
+                            role="img" 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 448 512">
+                            <path fill="currentColor" 
+                                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>
+                <li><a href="#"><img src="images/yt_logo_rgb_dark.png"></a></li>
+                <li class="spacer"></li>
                 <li>
                     <form action="/search.php">
                         <input type="text" placeholder="Search" name="search">
                         <button type="submit">Search</button>
                     </form>
                 </li>
-                <li><a href="#">Upload</a></li>
-                <li><a href="#">Apps</a></li>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="#">Account</a></li>
+                <li class="spacer"></li>
+                <li class="nav-item"> <!-- Upload -->
+                    <a class="nav-link" href="#">
+                        <svg aria-hidden="true" 
+                             focusable="false" 
+                             data-prefix="fas" 
+                             data-icon="video" 
+                             class="svg-inline--fa fa-video fa-w-18" 
+                             role="img" xmlns="http://www.w3.org/2000/svg" 
+                             viewBox="0 0 576 512">
+                            <path fill="currentColor" 
+                                  d="M336.2 64H47.8C21.4 64 0 85.4 0 111.8v288.4C0 426.6 21.4 448 47.8 448h288.4c26.4 0 47.8-21.4 47.8-47.8V111.8c0-26.4-21.4-47.8-47.8-47.8zm189.4 37.7L416 177.3v157.4l109.6 75.5c21.2 14.6 50.4-.3 50.4-25.8V127.5c0-25.4-29.1-40.4-50.4-25.8z">
+                            </path>
+                        </svg>
+                    </a>
+                </li> 
+                <li class="nav-item"> <!-- Apps -->
+                    <a class="nav-link" href="#">
+                        <svg aria-hidden="true" 
+                             focusable="false" 
+                             data-prefix="fas" 
+                             data-icon="grip-horizontal" 
+                             class="svg-inline--fa fa-grip-horizontal fa-w-14" 
+                             role="img" xmlns="http://www.w3.org/2000/svg" 
+                             viewBox="0 0 448 512">
+                             <path fill="currentColor" 
+                                   d="M96 288H32c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm160 0h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm160 0h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zM96 96H32c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm160 0h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32zm160 0h-64c-17.67 0-32 14.33-32 32v64c0 17.67 14.33 32 32 32h64c17.67 0 32-14.33 32-32v-64c0-17.67-14.33-32-32-32z">
+                            </path>
+                        </svg>
+                    </a>
+                </li>  
+                <li class="nav-item"> <!-- Notifications -->
+                    <a class="nav-link" href="#">
+                        <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" class="svg-inline--fa fa-bell fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z"></path></svg>
+                    </a>
+                </li> 
+                <li class="nav-item"> <!-- Account -->
+                    <a class="nav-link" href="#">
+                        <div class="nav-account">
+                        </div>
+                    </a>
+                </li> 
             </ul>
         </nav>
 
@@ -32,19 +87,20 @@
 
                 <!-- Video -->
 
-                <iframe width="1280" height="800" src="https://www.youtube-nocookie.com/embed/V74l_zS1x8E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe class="main-video" src="https://www.youtube-nocookie.com/embed/V74l_zS1x8E" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                 <!-- Video Stats-->
 
-                <div class="video-stats">
+                <div class="video-stats-container">
                     <h1>Contributing to Open Source Part I: The Easy Way</h1>
-                    <div>
-                        <span>60,642 View . Feb 237, 2014</span>
-                        <span class="upvotes">450</span>
-                        <span class="downvotes">19</span>
-                        <span class="share">Share</span>
-                        <span class="save">Save</span>
-                        <span class="more">...</span>
+                    <div class="video-stats">
+                        <span class="views">60,642 View • Feb 237, 2014</span>
+                        <span class="spacer"></span>
+                        <span class="stats upvotes">450</span>
+                        <span class="stats downvotes">19</span>
+                        <span class="stats share">Share</span>
+                        <span class="stats save">Save</span>
+                        <span class="stats more"></span>
                     </div>
                 </div>
 
@@ -53,6 +109,11 @@
                 <!-- Video Description-->
 
                 <div class="video-description-container">
+                    <div class="video-description-channel-image-container">
+                        <div class="video-description-channel-image">
+                            <div class="video-description-channel-text">T</div>
+                        </div>
+                    </div>
                     <div class="video-description-content">
                         <div class="video-description-channel">
                             <a href="https://www.youtube.com/channel/UCk0b0VTnJxXbxupXJ4D2yjQ">The Odin Project</a>
@@ -78,38 +139,51 @@
 
                 <div class="comment-count-container">
                     <span class="comment-count">17 Comments</span>
-                    <span class="sort-by">Sort by"</span>
+                    <span class="sort-by">Sort by</span>
                 </div>
 
                 <div class="add-comment-container">
+                    <div class="add-comment-image-container">
+                        <div class="add-comment-image"></div>
+                    </div>
                     <form action="/post-comment.php">
                         <input type="text" placeholder="Add a public comment...">
                     </form>
                 </div>
 
-                <div class="comment-container">
-                    <div class="comment">
-                        <div class="comment-user">
-                            <span class="user-name">Wing N.</span>
-                            <span class="time-posted">2 years ago (edited)</span>
+                <div class="comment-list">
+                    <div class="comment-container">
+                        <div class="comment-image-container">
+                            <div class="comment-image"></div>
                         </div>
-                        <p>"use your powers for good" haha thank you for the video</p>
-                        <div class="comment-stats">
-                            <span class="comment-upvotes">2</span>
-                            <span class="comment-downvote"> </span>
-                            <a href="#">Reply</a>
+                        <div class="comment-content">
+                            <div class="comment-user">
+                                <span class="user-name">Wing N.</span>
+                                <span class="time-posted">2 years ago (edited)</span>
+                            </div>
+                            <p>"use your powers for good" haha thank you for the video</p>
+                            <div class="comment-stats">
+                                <span class="comment-upvotes">2</span>
+                                <span class="comment-downvotes"> </span>
+                                <a href="#">Reply</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="comment">
-                        <div class="comment-user">
-                            <span class="user-name">andrewscheuermann05</span>
-                            <span class="time-posted">6 years ago</span>
+                    <div class="comment-container">
+                        <div class="comment-image-container">
+                            <div class="comment-image"></div>
                         </div>
-                        <p>FYI the edit button has changed to a diagonal pencil</p>
-                        <div class="comment-stats">
-                            <span class="comment-upvotes">2</span>
-                            <span class="comment-downvote">1</span>
-                            <a href="#">Reply</a>
+                        <div class="comment-content">
+                            <div class="comment-user">
+                                <span class="user-name">andrewscheuermann05</span>
+                                <span class="time-posted">6 years ago</span>
+                            </div>
+                            <p>FYI the edit button has changed to a diagonal pencil</p>
+                            <div class="comment-stats">
+                                <span class="comment-upvotes">2</span>
+                                <span class="comment-downvotes">1</span>
+                                <a href="#">Reply</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -120,6 +194,7 @@
             <aside>
                 <div class="up-next-container">
                     <span class="up-next">Up next</span>
+                    <span class="spacer"></span>
                     <span class="up-next-autoplay">Autoplay</span>
                 </div>
 
